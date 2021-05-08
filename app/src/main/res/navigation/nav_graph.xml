@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentMenu">
+
+    <fragment
+        android:id="@+id/fragmentMenu"
+        android:name="app.practice.epoxy.MenuFragment" >
+        <action
+            android:id="@+id/action_fragmentMenu_to_fragmentExample1"
+            app:destination="@id/fragmentExample1" />
+        <action
+            android:id="@+id/action_fragmentMenu_to_fragmentExample2"
+            app:destination="@id/fragmentExample2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentExample1"
+        android:name="app.practice.epoxy.example1.Example1Fragment" />
+
+    <fragment
+        android:id="@+id/fragmentExample2"
+        android:name="app.practice.epoxy.example2.example2Fragment" />
+
+</navigation>
