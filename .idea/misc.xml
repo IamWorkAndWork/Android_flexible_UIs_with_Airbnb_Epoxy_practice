@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/WorkWork/Documents/MyWork/Android/practice/Android_flexible_UIs_with_Airbnb_Epoxy_practice/app/src/main/res/layout/activity_main.xml" value="0.11770833333333333" />
+        <entry key="..\:/Users/WorkWork/Documents/MyWork/Android/practice/Android_flexible_UIs_with_Airbnb_Epoxy_practice/app/src/main/res/layout/example2_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/WorkWork/Documents/MyWork/Android/practice/Android_flexible_UIs_with_Airbnb_Epoxy_practice/app/src/main/res/layout/example2_row_image_ratio.xml" value="0.2359375" />
+        <entry key="..\:/Users/WorkWork/Documents/MyWork/Android/practice/Android_flexible_UIs_with_Airbnb_Epoxy_practice/app/src/main/res/layout/example2_row_product_item.xml" value="0.1" />
+        <entry key="..\:/Users/WorkWork/Documents/MyWork/Android/practice/Android_flexible_UIs_with_Airbnb_Epoxy_practice/app/src/main/res/layout/example3_fragment.xml" value="0.10960144927536232" />
+        <entry key="..\:/Users/WorkWork/Documents/MyWork/Android/practice/Android_flexible_UIs_with_Airbnb_Epoxy_practice/app/src/main/res/layout/example3_item_footer.xml" value="0.2246376811594203" />
+        <entry key="..\:/Users/WorkWork/Documents/MyWork/Android/practice/Android_flexible_UIs_with_Airbnb_Epoxy_practice/app/src/main/res/layout/example3_item_header.xml" value="0.25343999226562525" />
+        <entry key="..\:/Users/WorkWork/Documents/MyWork/Android/practice/Android_flexible_UIs_with_Airbnb_Epoxy_practice/app/src/main/res/layout/example3_item_loading.xml" value="0.2246376811594203" />
+        <entry key="..\:/Users/WorkWork/Documents/MyWork/Android/practice/Android_flexible_UIs_with_Airbnb_Epoxy_practice/app/src/main/res/layout/example3_item_user.xml" value="0.2246376811594203" />
+        <entry key="..\:/Users/WorkWork/Documents/MyWork/Android/practice/Android_flexible_UIs_with_Airbnb_Epoxy_practice/app/src/main/res/layout/fragment_menu.xml" value="0.4230769230769231" />
         <entry key="..\:/Work/Android/practice/testEpoxy/app/src/main/res/drawable-v24/bg_badge.xml" value="0.22135416666666666" />
         <entry key="..\:/Work/Android/practice/testEpoxy/app/src/main/res/drawable-v24/bg_image.xml" value="0.22135416666666666" />
         <entry key="..\:/Work/Android/practice/testEpoxy/app/src/main/res/drawable/bg_image.xml" value="0.22135416666666666" />

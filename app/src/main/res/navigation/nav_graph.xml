@@ -6,21 +6,32 @@
 
     <fragment
         android:id="@+id/fragmentMenu"
-        android:name="app.practice.epoxy.MenuFragment" >
+        android:name="app.practice.epoxy.MenuFragment"
+        android:label="EpoxyExample">
         <action
             android:id="@+id/action_fragmentMenu_to_fragmentExample1"
             app:destination="@id/fragmentExample1" />
         <action
             android:id="@+id/action_fragmentMenu_to_fragmentExample2"
             app:destination="@id/fragmentExample2" />
+        <action
+            android:id="@+id/action_fragmentMenu_to_fragmentExample3"
+            app:destination="@id/fragmentExample3" />
     </fragment>
 
     <fragment
         android:id="@+id/fragmentExample1"
-        android:name="app.practice.epoxy.example1.Example1Fragment" />
+        android:name="app.practice.epoxy.example1.Example1Fragment"
+        android:label="Example 1 EpoxyDatabinding" />
 
     <fragment
         android:id="@+id/fragmentExample2"
-        android:name="app.practice.epoxy.example2.example2Fragment" />
+        android:name="app.practice.epoxy.example2.example2Fragment"
+        android:label="Example 2 Carosel" />
+
+    <fragment
+        android:id="@+id/fragmentExample3"
+        android:name="app.practice.epoxy.example3.Example3Fragment"
+        android:label="Example 3 Paging3Epoxy" />
 
 </navigation>

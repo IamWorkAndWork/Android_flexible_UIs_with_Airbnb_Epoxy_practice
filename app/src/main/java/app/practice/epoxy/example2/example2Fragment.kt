@@ -17,10 +17,6 @@ import kotlinx.coroutines.delay
 
 class example2Fragment : Fragment() {
 
-    companion object {
-        fun newInstance() = example2Fragment()
-    }
-
     private lateinit var viewModel: Example2ViewModel
     private var _binding: Example2FragmentBinding? = null
     private val binding get() = _binding!!
@@ -50,7 +46,7 @@ class example2Fragment : Fragment() {
     private fun setupRecyclerView() {
 
         controller = Controller().apply {
-            megaBanner = DataSourceExample2.getMegaBanner()
+            megaBanner = DataSourceExample2.getMegaBanner2()
             horizontalBanners = DataSourceExample2.getHorizontalBanners()
             categories = DataSourceExample2.getCategories()
             productItems = DataSourceExample2.getPromotionProducts()

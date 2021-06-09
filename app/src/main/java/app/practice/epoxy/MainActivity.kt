@@ -58,12 +58,13 @@ class MainActivity : AppCompatActivity(), MenuFragment.MenuFragmentListener {
 
         val direction = when (pos) {
             1 -> {
-//                Example1Fragment.newInstance("","")
                 MenuFragmentDirections.actionFragmentMenuToFragmentExample1()
             }
-            else -> {
-//                example2Fragment.newInstance()
+            2 -> {
                 MenuFragmentDirections.actionFragmentMenuToFragmentExample2()
+            }
+            else ->{
+                MenuFragmentDirections.actionFragmentMenuToFragmentExample3()
             }
         }
 
