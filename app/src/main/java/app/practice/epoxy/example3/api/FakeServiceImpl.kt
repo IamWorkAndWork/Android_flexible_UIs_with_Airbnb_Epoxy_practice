@@ -7,8 +7,7 @@ class FakeServiceImpl : FakeService {
     override suspend fun getFakeUser(limit: Int, offset: Int): UserResponse {
 
         val userList = mutableListOf<UIModel>()
-        var offset = offset * 10
-        offset = limit + 1
+        var offset = offset * 10 + 1
 
         for (i in 0 until 10) {
             if (i == 0) {
@@ -18,7 +17,7 @@ class FakeServiceImpl : FakeService {
                 )
                 userList.add(header)
             } else if (i == 9) {
-                val footer = Footer(offset.toString(), "Footer $i")
+                val footer = Footer(offset.toString(), "Footer $offset")
                 userList.add(footer)
             } else {
                 val user = User(

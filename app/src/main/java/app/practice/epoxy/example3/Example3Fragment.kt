@@ -19,11 +19,15 @@ class Example3Fragment : Fragment() {
 
     private lateinit var viewModel: Example3ViewModel
     private val uiPagedListController by lazy {
-        UIPagedListController()
+        UIPagedListController(
+            onLoadSuccess
+        )
     }
 
     private var _binding: Example3FragmentBinding? = null
     private val binding get() = _binding!!
+
+    private var isRefresh = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,7 +53,14 @@ class Example3Fragment : Fragment() {
 
         observeViewModel()
         initWidget()
-        hideLoading()
+        initListener()
+    }
+
+    private fun initListener() {
+        binding.swipeRefreshLayout.setOnRefreshListener {
+            isRefresh = true
+            uiPagedListController.refresh()
+        }
     }
 
     private fun initWidget() {
@@ -62,18 +73,30 @@ class Example3Fragment : Fragment() {
     }
 
     private fun observeViewModel() {
+        println("modelsmodelsmodelsmodelsmodels start")
+
         lifecycleScope.launchWhenStarted {
             viewModel.getPagingData().collectLatest { data ->
+                println("modelsmodelsmodelsmodelsmodels done")
                 uiPagedListController.submitData(data)
+
+                if (isRefresh) {
+                    binding.swipeRefreshLayout.isRefreshing = false
+                }
             }
         }
     }
 
-    private fun hideLoading(){
+    private fun hideLoading() {
         lifecycleScope.launchWhenStarted {
-            delay(1000L)
+//            delay(1000L)
             binding.progressBar.visibility = View.GONE
+            println("modelsmodelsmodelsmodelsmodels hideLoading")
         }
+    }
+
+    private val onLoadSuccess = {
+        hideLoading()
     }
 
 }

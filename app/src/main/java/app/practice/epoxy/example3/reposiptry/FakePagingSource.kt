@@ -23,7 +23,7 @@ class FakePagingSource(
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, UIModel> {
         return try {
-            delay(1000L)
+            delay(800L)
 
             val pageNumber = params.key ?: 0
 

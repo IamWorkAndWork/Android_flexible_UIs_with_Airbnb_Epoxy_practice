@@ -8,11 +8,21 @@ import app.practice.epoxy.example3.reposiptry.model.User
 import com.airbnb.epoxy.EpoxyModel
 import com.airbnb.epoxy.paging3.PagingDataEpoxyController
 
-class UIPagedListController : PagingDataEpoxyController<UIModel>() {
+class UIPagedListController(
+    private val onLoadSuccess: (() -> Unit)?
+) : PagingDataEpoxyController<UIModel>() {
+
+    var endReached = false
 
     override fun buildItemModel(currentPosition: Int, item: UIModel?): EpoxyModel<*> {
 
+        println("modelsmodelsmodelsmodelsmodels loaded : " + currentPosition + " | " + item)
         return item?.let {
+
+            if (currentPosition == 0) {
+                onLoadSuccess?.invoke()
+                println("modelsmodelsmodelsmodelsmodels loaded1212 : " + currentPosition + " | " + item)
+            }
 
             when (item) {
                 is User -> {
@@ -34,8 +44,12 @@ class UIPagedListController : PagingDataEpoxyController<UIModel>() {
 
     }
 
-//    override fun addModels(models: List<EpoxyModel<*>>) {
-//        super.addModels(models)
-//    }
+    override fun addModels(models: List<EpoxyModel<*>>) {
+        println("modelsmodelsmodelsmodelsmodels addModels : " + models.size + " | endReached = " + endReached)
+
+        super.addModels(models)
+        Example3LoadingEpoxyModel_().id("loading").text("Loading")
+            .addIf(!endReached && models.isNotEmpty(), this)
+    }
 
 }
